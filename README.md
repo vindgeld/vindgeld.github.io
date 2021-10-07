@@ -1,2 +1,3 @@
 # vindgeld.github.io
-Config files for my GitHub profile.
+cuma sekedar penjajalan aja
+woless
