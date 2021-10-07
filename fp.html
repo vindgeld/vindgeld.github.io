@@ -52,31 +52,11 @@ headerfullpage
 #down:hover
 {
 	cursor: pointer;
-	background-color: #eee;
+	background-color:transparent;
 	opacity: 0.8;
 }
 
 
-/* top button mulai */
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: rgba(43, 124, 255, 0.2)
-  color: red;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 14px;
-}
-
-#myBtn:hover {
-  background-color: #555;}
-/*top button end*/
 
 
 table{
@@ -126,6 +106,7 @@ section{
 }
 
 .btn-modal_open {display:block;width:80px;margin:15px auto;padding:10px;-webkit-border-radius:20px;-moz-border-radius:20px;border-radius:20px;background:RoyalBlue;text-align: center;color: #FFF;font-weight: bold;box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);}
+
 .btn-modal_open:hover, .btn-modal_open:focus {background: #00b5fe;cursor: pointer;}
 .btn-modal_open:active {background: #0091cb;}
 .modalCheckbox .modal-overlay {display:none;background: rgba(0, 0, 0, 0.6);position:fixed;top:0;bottom:0;left:0;right:0;z-index: 1000;}
@@ -148,7 +129,7 @@ input[type=checkbox]:checked ~ .modal-dialog {
   -moz-transition: 0.5s;
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
-  transition: 0.4s;top:50%;transform: translate(-50%);}
+  transition: 0.4s;top:150%;transform: translate(-50%);}
 
 
 form{position:absolute;top:50%;left: 50%;transform: translate(-50%, -50%);width:100%;}
@@ -179,7 +160,7 @@ input[type=text]:focus {
 
 /* modal */
 #mybtna {
-  display: block;
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 5px;
@@ -187,24 +168,48 @@ input[type=text]:focus {
   font-size: 18px;
   border: none;
   outline: none;
-  background-color:rgb(47, 79, 79, 0.2);
+  background-color:transparent/*rgb(47, 79, 79, 0.2)*/;
   color: DarkOrange;
   cursor: pointer;
   padding: 10px;
   border-radius: 14px;
 }
 #mybtna:hover {
-  background-color: #555;}
+  background-color: transparent;}
 /*modal end*/
+
+/* top button mulai */
+#top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 10px;
+  z-index: 100;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color:transparent;
+  color: DarkOrange;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 14px;
+}
+
+#top:hover {
+  background-color:transparent;}
+/*top button end*/
+
 	</style>
 </head>
 <body>
 
 	<headerfullpage>
-		<p>How?</p>
+		<p>.    .    .pripun</p>
     <span id="down">&#8595;</span>
 	</headerfullpage>
+
 <label id="mybtna" for="toggle-modal" class="btn-modal_open">∆</label>
+<button onclick="topFunction()" id="top">^</button>
 	<div class="maine">
  <div class="tbl-header">
 <table id="testTable" cellpadding="0" cellspacing="0" border="0">
@@ -227,7 +232,7 @@ input[type=text]:focus {
 <form name="newgs">
     <input name="sub" type="text"><br>
     <input name="msg" type="text"><br><br>
-    <button type="submit">°°°°°</button>
+    <button type="submit">°</button>
 </form>
 
 <div class="yomeror">
@@ -372,8 +377,6 @@ function reload(){
     <script src="sw.js"></script>
 	</div>
 
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
@@ -386,25 +389,34 @@ window.onbeforeunload = function () {
 		console.log("Clicked!");
 		 $('html, body').animate({
         scrollTop: $(".maine").offset().top
-    }, 1000);
+    }, 10);
 	});
 });
+
+
+
 </script>
 
 <script>
-var mybutton = document.getElementById("myBtn");
+var mybutton = document.getElementById("top");
+var butt = document.getElementById("mybtna");
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
+    butt.style.display = "block";
   } else {
     mybutton.style.display = "none";
+    butt.style.display = "none";
   }
 }
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+
 </script>
 </body>
 </html>
