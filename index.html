@@ -226,7 +226,7 @@ input[type=text]:focus {
     <script>
 const base = 'https://docs.google.com/spreadsheets/d/1KK0WvTcZuuZ-KaDvKd4uTimdNK_EpMrzbPxfxcB6eyE/gviz/tq?';
 const output = document.querySelector('.output');
-const query = encodeURIComponent('Select A,B,C where C > 3 limit 20');
+const query = encodeURIComponent('Select A,B,C where C > 3 limit 60');
 const url = base + '&tq=' + query;
     fetch(url)
     .then(res => res.text())
