@@ -235,7 +235,7 @@ function topFunction() {
 <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js'></script>
 <script>var app=new Vue({el:"#app",mounted(){let e=this;axios.get("https://sheets.googleapis.com/v4/spreadsheets/1KK0WvTcZuuZ-KaDvKd4uTimdNK_EpMrzbPxfxcB6eyE/values/Sheet1?alt=json&key=AIzaSyDx3dSpa3bYdRHa4gJ9ZsR4qR124u7X3IE").then(function(t){let n=t.data.values;for(let t=1;t<n.length;t++){const a=n[t];let s={name:a[0],description:a[1],price:a[2]};e.isEven(t)?e.menuItems_L=e.menuItems_L.concat(s):e.menuItems_R=e.menuItems_R.concat(s)}console.log(t)})},data:{menuItems_L:[],menuItems_R:[],menuStyle:{background:"#056676",color:"#000"},dotStyle:{backgroundImage:"radial-gradient("+this.color+" 1px, transparent 0px)"}},computed:{},methods:{isEven:function(e){return e%2==2}}});
 </script>
-<!--  js tab baru spesialmenu -->
+<!--  js tab baru spesialmenu-->
 <script>
 function myFunctionee() {
   var x = document.getElementById("myDIV");
