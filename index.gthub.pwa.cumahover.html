@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>~ ck.ku ~</title>
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="manifest" href="manifest.webmanifest">
+  <style>*{box-sizing: border-box;margin: 0;padding: 0}body{font-family: 'Open Sans', sans-serif;line-height: 1.5}.showcase{height: 100vh;/*display: flex;align-items: center;justify-content: center;text-align: center;color: #fff;*/padding: 0 20px}.video-container{position: absolute;top: 0;left: 0;width: 100%;height: 100%;overflow: hidden}.video-container video{min-width: 100%;min-height: 100%;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);object-fit: cover}.video-container:after{content: '';z-index: 1;height: 100%;width: 100%;top: 0;left: 0;background: rgba(0, 0, 0, 0.1);position: absolute}
+  
+.forme {
+    position:fixed;bottom:5vh;left:0;
+  height:50px;border-radius: 5px;
+  width: 150px;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.1);
+  background: rgba(55, 121, 171, 0.4);z-index:5;
+  text-align: center;
+}
+.forme:hover{
+  height: 150px;
+  width: 60%;
+  border-radius: 5px;
+  background:rgba(55, 121, 171, 0.8);  
+}
+.forme .contentform{
+  opacity: 0;
+  transform: scale(0.5);
+  transform: translateY(-200%);
+  transition: opacity 0.2s, transform 0.8s;
+}
+.forme:hover .contentform{
+  opacity: 1;
+  transform: scale(1);
+  transform: translateY(0);
+}
+.list{
+    position:fixed; bottom:5vh;right:0;
+  height:50px;border-radius: 5px;
+  width: 150px;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.1);
+  background:rgba(55, 121, 171, 0.4);;z-index:5;
+}
+.list:hover{
+  height: 150px;overflow-x: hidden;overflow-y:auto;
+  width: 60%;
+  border-radius: 5px;
+  background:rgba(55, 121, 171, 0.8);
+}
+.list .contenttab {
+  opacity: 0;
+  transform: scale(0.5);
+  transform: translateY(-200%);
+  transition: opacity 0.2s, transform 0.8s;
+}
+.list:hover .contenttab {
+  opacity: 1;
+  transform: scale(1);
+  transform: translateY(0);
+}
+
+/*tab baru dr spesialmenu bsoffline*/
+.specials-container{display:flex;justify-content:center;margin-top:1px;height:100%;}
+.specials-container table{width:100%;margin:0 auto;table-layout:fixed;border-collapse:collapse;}
+.nameandprice td{text-align:left;font-size:9px;color:#2b2c48;border-bottom: solid 1px rgba(255,255,255,0.2);}
+.nameandprice td:last-child{padding-right:10px;text-align:right;font-size:10px}/*td:last-child span{padding-left:.25em}*/
+@media (min-width:992px){.specials-container table{margin:40px;width:65%}}
+/*tab baru end*/
+
+ 
+/*form start*/
+form{position:fixed;top:0;left:0;/*transform:translate(-50%,-50%);*/width:100%}input{border:0;width:5%;border-bottom:1px solid #bfa2db;background:0 0;outline:0;color:#2b2c48;font-size:10px;line-height:2rem;letter-spacing:.125rem}button{border:0;width:10%;background:0 0}input[type=text]{transition:width .4s ease-in-out}input[type=text]:focus{width:50%}.is-hidden{display:none!important}.loading-spinner{width:150px;height:150px}.loading-spinner svg{position:fixed;top:30%;left:25%;}.yomeror{position:fixed;top:75px;left:50%;color:blue;transform:translate(-50%,-50%)};
+/*form end*/
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<section class="showcase">
+	<div class="video-container">
+		<video src="https://vindgeld.github.io/lab.mp4" autoplay muted loop></video>
+	</div>
+	
+	<div class="content">
+<div class="forme">
+<div class="contentform">
+<form name="newgs">
+    <input name="sub" type="text"><br>
+    <input name="msg" type="text"><br><br>
+    <button type="submit">^</button>
+</form>
+
+<div class="yomeror">
+   <p onClick="window.location.reload()" class="js-success-message is-hidden">yoms!</p>
+    <p onClick="window.location.reload()" class="js-error-message is-hidden">Error!</p>
+</div>
+    
+<div class="loading js-loading is-hidden">
+<div class="loading-spinner">
+<svg>
+<line fill="none" stroke-linecap="round" stroke="DeepPink" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="85" y2="50.5">
+<animateTransform attributeName="transform" dur="1s" type="rotate" from="0 50 50" to="360 50 50" repeatCount="indefinite" />
+</line>
+<line fill="none" stroke-linecap="round" stroke="DeepPink" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="49.5" y2="74">
+<animateTransform attributeName="transform" dur="1s" type="rotate" from="0 50 50" to="360 50 50" repeatCount="indefinite" />
+</line> 
+</svg>
+</div>
+</div>
+
+</div>
+</div>
+<br>
+
+  <div class="list">
+  <div class="contenttab"><p>
+<div id="app" class="specials-container" v-if="menuItems_L" :style="menuStyle">
+	<table>
+		<tbody v-for="item in menuItems_R" :key="`specialmenu-${item.name}`">
+			<tr class="nameandprice">
+				<td :style="dotStyle"><span>{{item.name}}</span></td>
+				<td colspan="2">{{item.description}}</td>
+				<td :style="dotStyle"><span>Rp. {{item.price}}</span></td>
+			</tr>
+		</tbody>
+	</table>
+    </div></p></div>
+  </div>
+
+
+	     
+    </div>
+</section>
+
+
+<!-- js form start -->
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyxUwCtoOeleFoue3UGC8v0C9_cejWkSFekSeZMOpGRE_rfuuD_eq1R/exec'
+    const form = document.forms['newgs']
+    const loading = document.querySelector('.js-loading')
+    const successMessage = document.querySelector('.js-success-message')
+    const errorMessage = document.querySelector('.js-error-message')
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      showLoadingIndicator()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => showSuccessMessage(response))
+        .catch(error => showErrorMessage(error))
+    })
+
+    function showLoadingIndicator () {
+      form.classList.add('is-hidden')
+      loading.classList.remove('is-hidden')
+    }
+
+    function showSuccessMessage (response) {
+      console.log('Success!', response)
+      setTimeout(() => {
+        successMessage.classList.remove('is-hidden')
+        loading.classList.add('is-hidden')
+      }, 500)
+    }
+
+    function showErrorMessage (error) {
+      console.error('Error!', error.message)
+      setTimeout(() => {
+        errorMessage.classList.remove('is-hidden')
+        loading.classList.add('is-hidden')
+      }, 500)
+    }
+  </script>
+  <!-- js form end -->
+  
+
+<!--  js tab baru spesialmenu -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js'></script>
+<script>var app=new Vue({el:"#app",mounted(){let e=this;axios.get("https://sheets.googleapis.com/v4/spreadsheets/1KK0WvTcZuuZ-KaDvKd4uTimdNK_EpMrzbPxfxcB6eyE/values/Sheet1?alt=json&key=AIzaSyDx3dSpa3bYdRHa4gJ9ZsR4qR124u7X3IE").then(function(t){let n=t.data.values;for(let t=1;t<n.length;t++){const a=n[t];let s={name:a[0],description:a[1],price:a[2]};e.isEven(t)?e.menuItems_L=e.menuItems_L.concat(s):e.menuItems_R=e.menuItems_R.concat(s)}console.log(t)})},data:{menuItems_L:[],menuItems_R:[],menuStyle:{background:"transparent",color:"#000"},dotStyle:{backgroundImage:"radial-gradient("+this.color+" 1px, transparent 0px)"}},computed:{},methods:{isEven:function(e){return e%2==2}}});
+</script>
+<!--  js tab baru spesialmenu --> 
+
+    <script>
+// Register service worker to control making site work offline
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('/vindgeld.github.io/sw.js')
+    .then(() => { console.log('Service Worker Registered'); });
+}
+
+// Code to handle install prompt on desktop
+
+let deferredPrompt;
+const addBtn = document.querySelector('.add-button');
+addBtn.style.display = 'none';
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent Chrome 67 and earlier from automatically showing the prompt
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI to notify the user they can add to home screen
+  addBtn.style.display = 'block';
+
+  addBtn.addEventListener('click', () => {
+    // hide our user interface that shows our A2HS button
+    addBtn.style.display = 'none';
+    // Show the prompt
+    deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the ck prompt');
+      } else {
+        console.log('User dismissed the ck prompt');
+      }
+      deferredPrompt = null;
+    });
+  });
+});
+    </script>
+    <script src="sw.js"></script>
+</body>
+</html>
